@@ -1,0 +1,27 @@
+[package]
+name = "droidscope-mcp"
+version = "1.0.0"
+edition = "2021"
+license = "MIT"
+repository = "https://github.com/IsoumaNaN/droidscope-mcp"
+description = "100% Native Rust Android APK, DEX, and AArch64 ELF Reverse-Engineering MCP Server"
+
+[[bin]]
+name = "droidscope-mcp"
+path = "src/main.rs"
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }
+serde_json = { version = "1.0", features = ["preserve_order"] }
+zip = { version = "2.2", default-features = false, features = ["deflate"] }
+memmap2 = "0.9"
+rayon = "1.10"
+tiny_http = "0.12"
+url = "2.5"
+tempfile = "3.10"
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+codegen-units = 1
+strip = "symbols"

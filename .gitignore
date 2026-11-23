@@ -1,0 +1,27 @@
+# Rust build artifacts
+target/
+rust_core/target/
+
+# Python virtualenvs & bytecode
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Logs & temporary files
+*.log
+*.lock
+
+# Editor / IDE directories
+.vscode/
+.idea/
+.claude/
+
+# Local test APKs in repo root (keep misc/sample-app.apk tracked)
+/*.apk
+/*.apkm
+/*.xapk
+/*.aab
+/*.dex
+/*.ipa
